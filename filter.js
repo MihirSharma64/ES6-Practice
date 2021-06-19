@@ -1,5 +1,6 @@
 // filter --> kisi condition ke basis pe elems ko filter krne ke liye , 
 // true return hota h to wo elem include hoga
+// map and filter are higher order fns
 
 let words = ["abc","defg","hijkl","mnopqr","ewrqwedsa","edwwq","wewqeqweq"];
 
