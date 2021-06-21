@@ -61,22 +61,27 @@
 // }
 // arrow function ka this uske lexocographically superior environment ke this ke equal hota h matlab arrow fn ke jo bhaar this hai usko // apna this banaleta hai
 
-function fn(){
+// function fn(){
    
-   console.log(this);
-   console.log(`My name is ${this.person}`);
+//    console.log(this);
+//    console.log(`My name is ${this.person}`);
    
-     let abc = () => { // iske bhaar this ki value fn ka this hai,to abc ka this bhi jo bhi fn ka this hoga uske equal hogi
-      console.log(this); 
-      console.log(`My name is ${this.person}`);
-   }
-   abc();
+//      let abc = () => { // iske bhaar this ki value fn ka this hai,to abc ka this bhi jo bhi fn ka this hoga uske equal hogi
+//       console.log(this); 
+//       console.log(`My name is ${this.person}`);
+//    }
+//    abc();
 
-}
+// }
 
-let obj = {
-   person : "Mihir",
-   func : fn
-}
+// let obj = {
+//    person : "Mihir",
+//    func : fn
+// }
 
-obj.func();
+// obj.func();
+
+///////////////////////////////////////////////////////////////////
+// Bind and arrow fn ke elawa 2 aur bhi tareeke hote hai yeh krne ke liye , call and apply
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call
+// similarly search for apply

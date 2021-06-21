@@ -8,6 +8,7 @@ console.log(this); // => window .. jab global scope mei hote hai to this ki valu
 // the value of this for a fn is dependent on how fn is called and not on where it is called
 
 function fn(){ // Heap pe bana hoga,fn pe uska reference hoga
+   // 'use strict' // aise krne se normal call pe this ki value = undefined
    console.log(this);
    console.log(`Hi my name is ${this.person}`);
 }
