@@ -28,20 +28,50 @@
 // and whose this is explicitly set equal to the argument that is passed
 // to jo argument hoga uske equal this set krdeta h
 
+// function fn(){
+   
+//    console.log(this);
+//    console.log(`My name is ${this.person}`);
+   
+//    function abc(){
+//       console.log(this); 
+//       console.log(`My name is ${this.person}`);
+//    }
+
+//    let ret = abc.bind(this); // jo fn ka this hoga wohi ret ka this bhi set hojayega
+//    ret(); // ret ke this ki value ab obj ke equal h
+//    abc(); // iska this window ke equal hai
+//    return ret;
+// }
+
+// let obj = {
+//    person : "Mihir",
+//    func : fn
+// }
+
+// let rf = obj.func(); // rf ke andar ret miljayega
+// rf(); // yeh normal call hai lekin rf ka this hum obj ke equal set kr chuke hai already
+
+// let ret = obj.func;
+// ret();
+
+////////////////////////////////////////// Solution 2 - Using Arrow functions
+// syntax of arrow fns :
+// let fn = (arguments) => {
+// }
+// arrow function ka this uske lexocographically superior environment ke this ke equal hota h matlab arrow fn ke jo bhaar this hai usko // apna this banaleta hai
+
 function fn(){
    
    console.log(this);
    console.log(`My name is ${this.person}`);
    
-   function abc(){
+     let abc = () => { // iske bhaar this ki value fn ka this hai,to abc ka this bhi jo bhi fn ka this hoga uske equal hogi
       console.log(this); 
       console.log(`My name is ${this.person}`);
    }
+   abc();
 
-   let ret = abc.bind(this); // jo fn ka this hoga wohi ret ka this bhi set hojayega
-   ret(); // ret ke this ki value ab obj ke equal h
-   abc(); // iska this window ke equal hai
-   return ret;
 }
 
 let obj = {
@@ -49,8 +79,4 @@ let obj = {
    func : fn
 }
 
-let rf = obj.func(); // rf ke andar ret miljayega
-rf(); // yeh normal call hai lekin rf ka this hum obj ke equal set kr chuke hai already
-
-let ret = obj.func;
-ret();
+obj.func();

@@ -7,8 +7,8 @@ console.log(this); // => window .. jab global scope mei hote hai to this ki valu
 
 // the value of this for a fn is dependent on how fn is called and not on where it is called
 
-function fn(){
-   console.log(this); // window
+function fn(){ // Heap pe bana hoga,fn pe uska reference hoga
+   console.log(this);
    console.log(`Hi my name is ${this.person}`);
 }
 
@@ -18,8 +18,10 @@ fn();
 
 let obj = {
    person : "Mihir",
-   func : fn
+   func : fn 
 }
+
+
 // function call with obj:
 obj.func(); // this equal to obj pass hoyega ab, kyunki obj ke through call kri h
 // In this case my this is equal to the obj through which fn is called
